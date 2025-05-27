@@ -112,3 +112,4 @@ WHERE r.content IS NULL;
 SELECT people.name, reports.content
 FROM people LEFT OUTER JOIN reports USING (person_id)
 WHERE reports.content IS NULL;
+
