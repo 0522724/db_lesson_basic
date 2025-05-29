@@ -91,7 +91,7 @@ SELECT name,age FROM people WHERE departments_id = 1 ORDER BY age ASC;
 
 
 <Q9>
-SELECT gender, AVG(age) AS average_age FROM people WHERE gender = 2;
+SELECT AVG(age) AS average_age FROM people WHERE departments_id = 2 AND gender = 2;
 
 
 <Q10>
@@ -109,6 +109,7 @@ SELECT p.name, r.content
 FROM people p LEFT OUTER JOIN reports r USING (person_id)
 WHERE r.content IS NULL;
 
-SELECT people.name, reports.content
-FROM people LEFT OUTER JOIN reports USING (person_id)
-WHERE reports.content IS NULL;
+-- SELECT people.name, reports.content
+-- FROM people LEFT OUTER JOIN reports USING (person_id)
+-- WHERE reports.content IS NULL;
+
